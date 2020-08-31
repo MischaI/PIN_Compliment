@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PIN_Compliment</string>
+    <string name="pin_eingeben">PIN eingeben</string>
+    <string name="eingabe">Eingabe</string>
+</resources>
