@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,13 +22,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btn_pin = findViewById(R.id.btn_confirm);
-        inputText = findViewById(R.id.inputNumber);
-        inputPin = findViewById(R.id.inputText);
+        inputText = findViewById(R.id.inputText);
+        inputPin = findViewById(R.id.inputNumber);
 
 
         btn_pin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                getPassword();
                 getPIN();
             }
         });
@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    public void getKompliment(EditText pin){
+    public void getKompliment(EditText pwd){
 
-        String input = pin.getText().toString().trim().toLowerCase();
+        String input = pwd.getText().toString().toLowerCase().trim();
         CharSequence text;
 
         switch (input){
@@ -61,14 +61,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    public void showIMG(EditText code){
+        String pin = code.getText().toString().trim().toLowerCase();
+
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, "ToDo Foto anzeigen", duration);
+        toast.show();
+        // ToDo falls ein pin eingebgeben, Foto anzeigen
+    }
+
+    @SuppressLint("WrongViewCast")
+    public void getPassword(){
+        String text = inputText.getText().toString();
+        if(!text.equalsIgnoreCase("")){
+            getKompliment(inputText);
+        }
+    }
+
     @SuppressLint("WrongViewCast")
     public void getPIN(){
-        String pwd = "";
+        String pin = inputPin.getText().toString().trim();
+        if(!pin.equalsIgnoreCase("")){
+            showIMG(inputPin);
 
-
-
-        getKompliment(inputPin);
+        }
     }
+
 
     @Override
     public void onClick(View view) {
