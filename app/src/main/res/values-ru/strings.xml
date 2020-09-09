@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PIN Комплимент</string>
+    <string name="pin_input">PIN</string>
+    <string name="confirm">Ввод</string>
+    <string name="password">Пароль</string>
+    <string name="check_input">Код не найден</string>
+    <string name="liebe">Люблю тебя!</string>
+    <string name="best">Ты самое лучшее, что со мной случиилось</string>
+</resources>

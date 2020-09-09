@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">PIN_Compliment</string>
-    <string name="pin_eingeben">PIN eingeben</string>
-    <string name="eingabe">Eingabe</string>
+    <string name="app_name">PIN Kompliment</string>
+    <string name="pin_input">PIN eingeben</string>
+    <string name="confirm">Eingabe</string>
     <string name="password">Password</string>
+    <string name="check_input">Keine Übereinstimmung</string>
+    <string name="liebe">Ich liebe Dich</string>
+    <string name="best">Du bist das Beste, was mir je passiert ist</string>
 </resources>

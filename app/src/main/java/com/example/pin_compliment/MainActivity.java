@@ -43,14 +43,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CharSequence text;
 
         switch (input){
-            case "aaa":
-                text =  "Ich liebe dich!";
-                break;
             case "liebe":
-                text = "я люблю тебя!";
+            case "люблю":
+                text = getString(R.string.liebe);
+                break;
+            case "best":
+            case "лучшая":
+                text = getString(R.string.best);
                 break;
             default:
-                text =  "input prüfen";
+                text = "check input";
+                text = getString(R.string.check_input);
         }
 
 
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, "ToDo Foto anzeigen", duration);
+        Toast toast = Toast.makeText(context, "ToDo Foto anzeigen \n" + code.getText().toString(), duration);
         toast.show();
         // ToDo falls ein pin eingebgeben, Foto anzeigen
     }
